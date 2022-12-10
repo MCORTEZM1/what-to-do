@@ -1,4 +1,5 @@
 const { Schema, model, isNew, isModified } = require('mongoose'); 
+const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
     {
