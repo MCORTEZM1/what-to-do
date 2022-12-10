@@ -66,7 +66,6 @@ userSchema.pre('save', async function(next) {
     next();
 }); 
 
-
 // hash password for 'findOneAndUpdate' specifically
 userSchema.pre('findOneAndUpdate', async function(next){
     if ( this._update.password) { 
@@ -76,8 +75,7 @@ userSchema.pre('findOneAndUpdate', async function(next){
     }
 
     next(); 
-}) 
-
+});
 
 const User = model('User', userSchema);
 
